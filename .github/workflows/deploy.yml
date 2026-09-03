@@ -49,7 +49,7 @@ jobs:
           rsync -a ./ _site/ \
             --exclude /.git --exclude /.github --exclude /docs --exclude /_site \
             --exclude /design-v2 --exclude /CLAUDE.md --exclude /README.md \
-            --exclude /run.sh --exclude .DS_Store
+            --exclude /run.sh --exclude /mark.md --exclude .DS_Store
           rsync -a docs/dist/ _site/docs/
 
       - uses: actions/upload-pages-artifact@v5

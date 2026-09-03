@@ -113,8 +113,7 @@ to `_site/docs/` by the workflow, not to the artifact root.
   `assets/shots/` are WebP (1600 px wide, q 82) made from app screenshots;
   `reader*` mirrors the manual's shot (see README). The site is public: the
   password gate (and the hashed directory holding the old design) was
-  removed 2026-09-02. `mark.md`, the blog's source, is published as a raw
-  file until the deploy excludes it.
+  removed 2026-09-02. `mark.md` is excluded from the deploy.
 - Test param: `?theme=light|dark` forces a theme (and swaps the
   `<picture>` sources) — use for screenshots.
 - Verify before pushing: `./run.sh` (or `python3 -m http.server 8090`),
