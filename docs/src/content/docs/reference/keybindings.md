@@ -31,6 +31,7 @@ shows it: an `EMACS` chip, or the current Vim mode (`NORMAL`, `INSERT`,
 | Open folder… | `Mod+Shift+O` |
 | Save / Save As… | `Mod+S` / `Mod+Shift+S` |
 | Close tab | `Mod+W` |
+| Close folder | `Mod+Shift+W` |
 | Print… | `Mod+P` |
 | Go to file… | `Mod+T` |
 | Command palette | `Mod+T`, then type a command name |
