@@ -14,7 +14,7 @@ Select it in **Settings ▸ AI ▸ Coding agent**.
 
 | Section | In the workspace | In your home folder |
 |---|---|---|
-| **AGENTS.md** | `AGENTS.md` and `CLAUDE.md`, in the root and in any subfolder | `~/.config/opencode/AGENTS.md`, `~/.claude/CLAUDE.md` |
+| **AGENTS.md** | `AGENTS.md` in the root and in any subfolder; `CLAUDE.md` where there is no `AGENTS.md`, [see below](#claudemd-where-there-is-no-agentsmd) | `~/.config/opencode/AGENTS.md`, or `~/.claude/CLAUDE.md` without it |
 | **SKILLS** | `.opencode/skills/*/SKILL.md` (or `skill/`), `.claude/skills/*/SKILL.md`, `.agents/skills/*/SKILL.md`, in the root and in any subfolder | `~/.config/opencode/skills` (or `skill`), `~/.claude/skills`, `~/.agents/skills` |
 | **AGENTS** | `.opencode/agents/**/*.md` (or `agent/`), in the root and in any subfolder | `~/.config/opencode/agents/**/*.md` (or `agent/`) |
 | **COMMANDS** | `.opencode/commands/**/*.md` (or `command/`), in the root and in any subfolder | `~/.config/opencode/commands/**/*.md` (or `command/`) |
@@ -30,14 +30,38 @@ stay where they are.
 Agents and commands nested in subfolders are named by the path:
 `team/reviewer`, `/team/review`.
 
+### CLAUDE.md where there is no AGENTS.md
+
+OpenCode reads `CLAUDE.md`, Claude Code's file, where there is no
+`AGENTS.md`. Marginal lists the ones it would read, with *Read in place of
+AGENTS.md* as their second line:
+
+- `CLAUDE.md` at the root, when neither the root nor any folder above it has
+  an `AGENTS.md`. OpenCode looks up to the root of the git clone, or up to
+  the filesystem root outside one.
+- `CLAUDE.md` in a subfolder that has no `AGENTS.md` of its own. Each
+  subfolder decides for itself: an `AGENTS.md` at the root does not hide
+  them, unlike the rule Claude Code applies the other way round.
+- `~/.claude/CLAUDE.md`, when there is no `~/.config/opencode/AGENTS.md`.
+
+`OPENCODE_DISABLE_CLAUDE_CODE` or `OPENCODE_DISABLE_CLAUDE_CODE_PROMPT`, set
+to `1`, `true`, `yes`, `on`, or `y` in the environment Marginal was
+launched from, turns all of these off, as it does in OpenCode.
+`OPENCODE_DISABLE_CLAUDE_CODE` also turns off the `.claude/skills` folders
+in OpenCode; Marginal still lists those. The deprecated `CONTEXT.md`, which
+OpenCode reads when there is neither file, is not listed.
+
 ## How OpenCode uses these files
 
 - **AGENTS.md** is collected from the current directory up to the git
-  worktree root, every match on that chain. `CLAUDE.md` is consulted only
-  when no `AGENTS.md` exists anywhere on the chain. Globally, the first of
+  worktree root, every match on that chain; outside a git repository the
+  chain runs to the filesystem root. `CLAUDE.md` is consulted only when no
+  `AGENTS.md` exists anywhere on the chain, and the deprecated `CONTEXT.md`
+  only when neither does. Globally, the first of
   `~/.config/opencode/AGENTS.md` and `~/.claude/CLAUDE.md` that exists is
-  used. When OpenCode reads a file, it also injects the nearest `AGENTS.md`
-  above that file, which is why nested ones matter.
+  used. When OpenCode reads a file, each folder between that file and the
+  current directory adds its `AGENTS.md`, or its `CLAUDE.md` when it has
+  none, which is why nested ones matter.
 - **Skills** are `SKILL.md` files with a required `name` and `description`.
   The `.claude/skills` and `.agents/skills` folders are read for
   compatibility; `OPENCODE_DISABLE_CLAUDE_CODE_SKILLS=1` turns the first
@@ -68,4 +92,4 @@ plugins and custom tools (`.ts`, `.js`), themes, and the managed
 configuration under `/Library/Application Support/opencode`,
 `/etc/opencode`, or `%ProgramData%\opencode`.
 
-Checked against the OpenCode documentation and source on 1 September 2026.
+Checked against the OpenCode documentation and source on 24 September 2026.

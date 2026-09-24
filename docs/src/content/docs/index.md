@@ -20,10 +20,10 @@ and each has a page here that lists every folder it reads:
 
 | Agent | Instruction file | Manual page |
 |---|---|---|
-| Claude Code | `CLAUDE.md` | [Claude Code](agents/claude-code/) |
+| Claude Code | `CLAUDE.md`, or `AGENTS.md` where there is none | [Claude Code](agents/claude-code/) |
 | Codex | `AGENTS.md` | [Codex](agents/codex/) |
 | Grok Build | `AGENTS.md` | [Grok Build](agents/grok/) |
-| OpenCode | `AGENTS.md` | [OpenCode](agents/opencode/) |
+| OpenCode | `AGENTS.md`, or `CLAUDE.md` where there is none | [OpenCode](agents/opencode/) |
 | Cursor | `AGENTS.md`, `.cursor/rules` | [Cursor](agents/cursor/) |
 | Qwen Code | `QWEN.md` | [Qwen Code](agents/qwen-code/) |
 

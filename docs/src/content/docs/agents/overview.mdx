@@ -25,10 +25,10 @@ Open **Settings ▸ AI ▸ Coding agent** and pick one:
 
 | Agent | Made by | Instruction file | Page |
 |---|---|---|---|
-| Claude Code | Anthropic | `CLAUDE.md` | [Claude Code](../claude-code/) |
+| Claude Code | Anthropic | `CLAUDE.md`, or `AGENTS.md` where there is none | [Claude Code](../claude-code/) |
 | Codex | OpenAI | `AGENTS.md` | [Codex](../codex/) |
 | Grok Build | xAI | `AGENTS.md` | [Grok Build](../grok/) |
-| OpenCode | open source | `AGENTS.md` | [OpenCode](../opencode/) |
+| OpenCode | open source | `AGENTS.md`, or `CLAUDE.md` where there is none | [OpenCode](../opencode/) |
 | Cursor | Anysphere | `AGENTS.md` and `.cursor/rules` | [Cursor](../cursor/) |
 | Qwen Code | Alibaba | `QWEN.md` | [Qwen Code](../qwen-code/) |
 
@@ -68,7 +68,13 @@ you type.
 
 Switching the agent changes what is listed, not what is on disk. A folder
 that carries both a `CLAUDE.md` and an `AGENTS.md` shows one or the other,
-depending on which agent you picked.
+depending on which agent you picked. Two agents also read
+the other's file where their own is missing: Claude Code reads `AGENTS.md`
+where there is no `CLAUDE.md`, and OpenCode reads `CLAUDE.md` where there is
+no `AGENTS.md`. Marginal lists those files too, with *Read in place of …* as
+their second line; see
+[Claude Code](../claude-code/#agentsmd-where-there-is-no-claudemd) and
+[OpenCode](../opencode/#claudemd-where-there-is-no-agentsmd).
 
 ## Where the files come from
 
