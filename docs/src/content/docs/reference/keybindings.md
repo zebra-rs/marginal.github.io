@@ -36,6 +36,7 @@ shows it: an `EMACS` chip, or the current Vim mode (`NORMAL`, `INSERT`,
 | Go to file… | `Mod+T` |
 | Command palette | `Mod+T`, then type a command name |
 | Editor / Split / Preview | `Mod+1` / `Mod+2` / `Mod+3` |
+| Full screen | `⌃⌘F` on macOS, `F11` on Windows/Linux |
 | Toggle sidebar | `Mod+Shift+E` |
 | Filter files (sidebar file list) | `Mod+Shift+F` |
 | Toggle terminal | `Mod+J` |
@@ -43,6 +44,10 @@ shows it: an `EMACS` chip, or the current Vim mode (`NORMAL`, `INSERT`,
 | AI: edit selection… | `Mod+K` |
 | AI: ask about selection… | `Mod+Shift+K` |
 | Settings… | `Mod+,` |
+
+In [two-page full screen](../../writing/two-pages/), `→` / `←`,
+`Page Down` / `Page Up`, `Space` / `Shift+Space`, and `Home` / `End` turn
+the pages.
 
 Fold and unfold commands (Fold All, Fold Level 2–4, Unfold All) have no
 default key — reach them from the View menu or the palette, or give them one
