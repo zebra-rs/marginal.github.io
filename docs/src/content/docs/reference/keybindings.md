@@ -36,7 +36,7 @@ shows it: an `EMACS` chip, or the current Vim mode (`NORMAL`, `INSERT`,
 | Go to file… | `Mod+T` |
 | Command palette | `Mod+T`, then type a command name |
 | Editor / Split / Preview | `Mod+1` / `Mod+2` / `Mod+3` |
-| Full screen | `⌃⌘F` on macOS, `F11` on Windows/Linux |
+| Full screen | `⌃⌘F` on macOS, `F11` on Windows/Linux (`Esc` also leaves it there) |
 | Toggle sidebar | `Mod+Shift+E` |
 | Filter files (sidebar file list) | `Mod+Shift+F` |
 | Toggle terminal | `Mod+J` |

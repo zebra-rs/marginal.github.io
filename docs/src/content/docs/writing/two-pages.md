@@ -41,8 +41,9 @@ so lines stay a comfortable length on a large screen.
 
 ## Getting out
 
-- **Leave full screen** (<kbd>⌃⌘F</kbd> on macOS, <kbd>F11</kbd> on
-  Windows and Linux) to return to a normal window, still in Preview.
+- **Leave full screen** (<kbd>⌃⌘F</kbd> on macOS; <kbd>Esc</kbd> or
+  <kbd>F11</kbd> on Windows and Linux) to return to a normal window, still
+  in Preview.
 - **Switch view** with `Mod+1` (Editor) or `Mod+2` (Split) to bring the
   editor and the rest of the window back while staying full screen.
 
