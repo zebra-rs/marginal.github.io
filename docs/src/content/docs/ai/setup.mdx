@@ -50,17 +50,18 @@ it stays listed, marked *typed in*.
 
 **Effort** trades speed for reasoning, in the provider's own terms; a
 model without such a control shows *not adjustable*. Marginal sends
-exactly what the setting says. The lists, as checked on 2 September 2026:
+exactly what the setting says. The lists, as checked on 11 November 2026:
 
 | Provider | Models (default first) | Effort |
 |---|---|---|
-| Anthropic | Claude Opus 5, Claude Sonnet 5, Claude Fable 5.1, Claude Haiku 4.5 | `low`, `medium`, `high` (default), `xhigh`, `max`; Haiku 4.5 has none |
-| OpenAI | GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna, GPT-5.4 mini, GPT-5.4 nano | `none`, `low`, `medium`, `high`, `xhigh`, `max` (`medium` is the default on GPT-5.6, `none` on GPT-5.4 mini and nano, which lack `max`) |
-| Google | Gemini 3.8 Flash, Gemini 3.1 Pro (preview), Gemini 3.7 Flash, Gemini 3.5 Flash-Lite | thinking level `minimal`, `low`, `medium`, `high`; Gemini 3 cannot stop thinking, and `minimal` is offered only by Flash-Lite |
-| xAI | Grok 4.6, Grok 4.5, Grok 4.3, Grok 4.20 non-reasoning | `none`, `low`, `medium`, `high`, `xhigh` per model: Grok 4.6 and 4.5 always reason (`high` default), Grok 4.3 can skip it with `none`, the 4.20 non-reasoning model has no control |
+| Anthropic | Claude Opus 5.5, Claude Sonnet 5.5, Claude Haiku 5.5, Claude Fable 5.2 | `low`, `medium`, `high`, `xhigh`, `max`; the default is `medium` on Opus 5.5 and Haiku 5.5, `high` on Sonnet 5.5 and Fable 5.2 |
+| OpenAI | GPT-6.1 Sol, GPT-6 Astra, GPT-6.1 Terra, GPT-6 Luna | `low`, `medium` (default), `high`, `xhigh`, `max`; Terra and Luna also take `none` (no reasoning) |
+| Google | Gemini 4 Argon, Gemini 4 Carbon, Gemini 3.8 Flash, Gemini 3.5 Flash-Lite | thinking level `low`, `medium` (default), `high`; Flash-Lite adds `minimal` and starts there. Gemini cannot stop thinking. Gemini 4 Carbon may not be open to every key yet |
+| xAI | Grok 4.7, Grok 4.6, Grok 4.3, Grok 4.20 non-reasoning | `none`, `low`, `medium`, `high`, `xhigh` per model: Grok 4.7 and 4.6 always reason (`high` default), Grok 4.3 can skip it with `none`, the 4.20 non-reasoning model has no control |
 | Alibaba Cloud | Qwen3.8 Max, Qwen3.7 Plus, Qwen3.8 Flash, Qwen3 Max, Qwen Plus | thinking **on** or **off** only; on by default from Qwen3.5 up, off for Qwen3 Max and Qwen Plus |
 
-A model id you have set by other means is kept and listed too.
+A model id you have set by other means is kept and listed too, and so is
+a model you picked from an earlier version of these lists.
 
 ## When something goes wrong
 
